@@ -317,7 +317,7 @@
       const u = currentUser();
       if (!u) {
         // redirect to login and come back
-        const next = `${window.location.pathname.split('/').pop() || 'home_page.html'}?focus=${encodeURIComponent(eventId)}`;
+        const next = `${window.location.pathname.split('/').pop() || 'index.html'}?focus=${encodeURIComponent(eventId)}`;
         window.location.href = `./log_in_page.html?next=${encodeURIComponent(next)}`;
         return;
       }
@@ -483,7 +483,7 @@
         clearSession();
         toast('خروج انجام شد.', 'good');
         setTimeout(() => {
-          window.location.href = './home_page.html';
+          window.location.href = './index.html';
         }, 350);
       };
     }
@@ -498,7 +498,7 @@
       wrap.innerHTML = `
         <div style="width:100%;background:rgba(7,43,54,.10);border:2px dashed rgba(7,43,54,.25);border-radius:18px;padding:18px;direction:rtl">
           هنوز در هیچ رویدادی ثبت‌نام نکرده‌اید.
-          <a href="./home_page.html" style="font-weight:800; margin-right:10px; color:inherit;">رفتن به صفحه اصلی</a>
+          <a href="./index.html" style="font-weight:800; margin-right:10px; color:inherit;">رفتن به صفحه اصلی</a>
         </div>
       `;
       return;
