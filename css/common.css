@@ -1,0 +1,98 @@
+:root{
+  --shadow-1: 0 6px 0 rgba(0,0,0,.08);
+  --shadow-2: 0 10px 0 rgba(0,0,0,.10);
+}
+
+/* Small, reusable UI helpers */
+.hidden{ display:none !important; }
+
+.alert{
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.alert.error{ background: rgba(255, 74, 74, 0.14); color: #ffdddd; border: 1px solid rgba(255,74,74,0.35); }
+.alert.success{ background: rgba(50, 205, 50, 0.14); color: #d7ffdb; border: 1px solid rgba(50,205,50,0.35); }
+
+.hint-links{
+  margin-top: 14px;
+  display:flex;
+  gap: 14px;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+.hint-links a{ color: #fff; opacity: .9; text-decoration: none; font-weight: 700; }
+.hint-links a:hover{ opacity: 1; text-decoration: underline; }
+
+/* Toast */
+.toast-stack{
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+.toast{
+  direction: rtl;
+  background: rgba(7, 43, 54, 0.92);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 16px;
+  padding: 10px 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+  transform: translateY(8px);
+  opacity: 0;
+  animation: toastIn 240ms ease-out forwards;
+}
+.toast.good{ border-color: rgba(50,205,50,0.35); }
+.toast.bad{ border-color: rgba(255,74,74,0.35); }
+@keyframes toastIn{ to{ transform: translateY(0); opacity: 1; } }
+
+/* Light button animation (hover + press) */
+.btn, .btn-primary, .btn-ghost, .submit, .nav-btn{
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+  will-change: transform;
+}
+
+.btn:hover, .btn-primary:hover, .submit:hover, .nav-btn:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+
+.btn:active, .btn-primary:active, .btn-ghost:active, .submit:active, .nav-btn:active{
+  transform: translateY(1px) scale(.98);
+  filter: brightness(.98);
+}
+
+.btn:focus-visible, .btn-primary:focus-visible, .btn-ghost:focus-visible, .submit:focus-visible, .nav-btn:focus-visible{
+  outline: 3px solid rgba(255, 255, 255, 0.65);
+  outline-offset: 3px;
+}
+
+/* Ripple */
+.ripple-surface{
+  position: relative;
+  overflow: hidden;
+}
+.ripple{
+  position:absolute;
+  border-radius: 999px;
+  transform: scale(0);
+  opacity: .35;
+  background: #fff;
+  pointer-events:none;
+  animation: ripple 520ms ease-out forwards;
+}
+@keyframes ripple{
+  to{ transform: scale(1); opacity: 0; }
+}
+
+/* Simple fade-in for dynamic cards */
+.fade-in{
+  animation: fadeIn 220ms ease-out both;
+}
+@keyframes fadeIn{ from{ opacity: 0; transform: translateY(6px);} to{ opacity: 1; transform: translateY(0);} }

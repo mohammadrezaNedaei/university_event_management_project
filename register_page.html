@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ثبت نام — صفحه ثبت نام</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/register_page.css" />
+  <script src="./js/app.js" defer></script>
+</head>
+<body data-page="register">
+  <main class="card" role="main" aria-label="ثبت نام">
+    <div class="top-pill">ثبت نام</div>
+
+    <div class="content">
+      <div class="art" aria-hidden>
+        <img src="./assets/confrance.png" width="100%" alt="" />
+      </div>
+
+      <form class="form" data-form="register" action="#" method="post" autocomplete="on" aria-label="فرم ثبت نام">
+        <div class="field">
+          <input type="text" name="fullName" placeholder="نام و نام خانوادگی" required dir="rtl"/>
+        </div>
+
+        <div class="field">
+          <input type="tel" name="phone" placeholder="شماره تلفن" inputmode="tel" required dir="rtl"/>
+        </div>
+
+        <div class="field">
+          <input type="password" name="password" placeholder="رمز عبور" required dir="rtl"/>
+        </div>
+
+        <div class="field">
+          <input type="password" name="password2" placeholder="تکرار رمز عبور" required dir="rtl"/>
+        </div>
+
+        <div id="form-alert" class="alert error hidden" role="alert" aria-live="polite"></div>
+
+        <div class="submit-wrap">
+          <button type="submit" class="submit ripple-surface">ثبت نام</button>
+        </div>
+
+        <div class="hint-links" style="margin-top:18px">
+          <a href="./log_in_page.html">ورود</a>
+          <a href="./home_page.html">بازگشت به صفحه اصلی</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

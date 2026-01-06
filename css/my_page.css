@@ -1,0 +1,224 @@
+:root {
+    --bg: #9fd6ea;
+    /* page bg */
+    --nav: #072b36;
+    /* dark header */
+    --accent: #ffb300;
+    /* yellow title pill */
+    --card-top: #a7d7ea;
+    /* card header */
+    --card-body: #87c9dd;
+    /* card body */
+    --outline: #ff8a00;
+    /* orange outline */
+    --muted: #46606a;
+    --radius: 20px;
+    font-family: 'Vazirmatn', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--nav);
+}
+
+/* top nav */
+.appbar {
+    width: 92%;
+    margin: 22px auto;
+    padding: 18px 22px;
+    background: var(--nav);
+    color: #fff;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.appbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.appbar .logo .icon {
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.appbar .links {
+    font-weight: 700;
+    font-size: 26px;
+    display: flex;
+    gap: 48px
+}
+
+.page-title {
+    width: 100%;
+    margin: 18px auto 28px;
+    background: var(--accent);
+    padding: 18px 28px;
+    border-radius: 28px;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: right;
+    color: #072b36;
+}
+
+.container {
+    width: 92%;
+    margin: 0 auto
+}
+
+.cards {
+    display: flex;
+    gap: 34px;
+    justify-content: space-between;
+    align-items: flex-start
+}
+
+.card {
+    width: 32%;
+    min-width: 240px;
+    border-radius: 18px;
+    border: 3px solid var(--outline);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column
+}
+
+.card-head {
+    background: var(--card-top);
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--outline);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #072b36;
+    font-weight: 800
+}
+
+.meta {
+    margin-right: 10px
+}
+
+.meta .title {
+    font-weight: 700
+}
+
+.meta .subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px
+}
+
+.hero {
+    height: 180px;
+    background: #f1e8ef;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.card-body {
+    direction: rtl;
+    background: var(--card-body);
+    padding: 18px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.desc {
+    color: #06323a;
+    line-height: 1.6
+}
+
+.card-foot {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    align-items: center;
+    margin-top: 12px
+}
+
+.btn-primary {
+    background: var(--outline);
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 14px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: #072b36;
+    border-radius: 20px;
+    padding: 8px 14px
+}
+
+@media (max-width:1000px) {
+    .cards {
+        flex-wrap: wrap
+    }
+
+    .card {
+        width: 48%
+    }
+}
+
+@media (max-width:640px) {
+    .card {
+        width: 100%
+    }
+
+    .appbar {
+        width: 96%
+    }
+
+    .page-title {
+        width: 96%
+    }
+}
+/* tweaks for dynamic version */
+.cards{ flex-wrap: wrap; }
+
+.links a{ font-weight:700; }
+
+.nav-btn{
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.35);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 800;
+}

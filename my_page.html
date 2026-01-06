@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>رویدادهای من</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/my_page.css" />
+  <script src="./js/app.js" defer></script>
+</head>
+<body data-page="my">
+  <header class="appbar" role="banner">
+    <div class="logo">
+      <div class="icon">📅</div>
+    </div>
+
+    <nav class="links" aria-label="main nav">
+      <div id="user-name">نام کاربر</div>
+      <div style="opacity:.9">رویداد های من</div>
+      <a href="./home_page.html" style="color:inherit; text-decoration:none; opacity:.9">همه رویدادها</a>
+      <button id="logout" class="nav-btn ripple-surface" type="button">خروج</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-title">رویداد های من</div>
+
+    <section id="my-events" class="cards" aria-label="my events list">
+      <!-- JS renders joined events here -->
+    </section>
+  </main>
+
+</body>
+</html>

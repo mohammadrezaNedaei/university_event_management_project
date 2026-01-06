@@ -1,0 +1,269 @@
+:root {
+    --bg: #9fd6ea;
+    /* light turquoise */
+    --nav: #05364a;
+    /* dark teal */
+    --card-top: #a7d7ea;
+    /* top band */
+    --card-body: #87c9dd;
+    /* card body */
+    --accent: #ff8a00;
+    /* orange */
+    --muted: #6a6a6a;
+    --card-border: 4px;
+    --radius: 20px;
+    --card-radius: 16px;
+    font-family: 'Vazirmatn', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #073642;
+}
+
+/* Top hero / app bar */
+.appbar {
+    width: 92%;
+    margin: 28px auto 40px;
+    background: var(--nav);
+    border-radius: 24px;
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: whitesmoke;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.05) inset;
+}
+
+.appbar .left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+}
+
+.logo .cal {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #fff 0, #f7f7f7 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #ffb347
+}
+
+.nav {
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 1px
+}
+
+.nav .link {
+    margin-left: 32px
+}
+
+/* Page container */
+.container {
+    width: 92%;
+    margin: 0 auto;
+}
+
+/* Cards row */
+.cards {
+    display: flex;
+    gap: 56px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: transparent;
+    /* we'll paint parts inside */
+    width: 30%;
+    min-width: 280px;
+    max-width: 420px;
+    border-radius: var(--card-radius);
+    padding: 0;
+    border: 0;
+    position: relative;
+    outline: none;
+}
+
+/* orange outline like in image */
+.card .frame {
+    border: 4px solid var(--accent);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 560px;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.04);
+}
+
+/* header inside card */
+.card-head {
+    background: var(--card-top);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffca28;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #072b35
+}
+
+.meta {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.meta .title {
+    font-weight: 700
+}
+
+.meta .subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px
+}
+
+/* image placeholder */
+.hero {
+    height: 210px;
+    background: #f1eaf1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .shapes {
+    opacity: .45
+}
+
+/* body */
+.card-body {
+    background: var(--card-body);
+    flex: 1;
+    padding: 18px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body .text {
+    margin-bottom: 16px;
+    direction: rtl;
+}
+
+.card-body h3 {
+    margin: 0 0 6px 0;
+    font-size: 18px
+}
+
+.card-body p.sub {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px
+}
+
+.card-body p.desc {
+    margin-top: 14px;
+    color: #234;
+    line-height: 1.6
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    align-items: center
+}
+
+/* right-floating orange primary button */
+.btn {
+    border-radius: 22px;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    color: #cfe8ef;
+    padding: 8px 14px;
+    border-radius: 20px
+}
+
+/* small dots menu */
+.dots {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    opacity: 0.6
+}
+
+/* responsive */
+@media (max-width:1100px) {
+    .card {
+        width: 48%
+    }
+}
+
+@media (max-width:760px) {
+    .appbar {
+        width: 96%;
+        padding: 14px
+    }
+
+    .cards {
+        gap: 22px
+    }
+
+    .card {
+        width: 100%
+    }
+}
